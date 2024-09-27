@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Rejouice;
+    src: url(./Rejouice-Headline.woff2);
+}
+@font-face {
+    font-family: Rejouice-2;
+    src: url(./NBInternationalProBoo.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rejouice-2";
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.page1-content h1{
+     font-family: "Rejouice";
+}
