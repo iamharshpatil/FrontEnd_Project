@@ -240,7 +240,7 @@ gsap.to(".page9",{
       scroller:".main",
       start: "top -20%",
         end : "top -20%",
-      markers:true,
+      // markers:true,
       scrub:1,  
   }
 })
