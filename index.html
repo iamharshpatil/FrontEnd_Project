@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrontEnd Project</title>
-    <link rel="shortcut icon" href="https://i.pinimg.com/originals/c5/67/9d/c5679d385fe4f711dcae098c70d59aa4.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -17,7 +18,7 @@
 />
 </head>
 <body>
-    <div class=" childnav z-[99] ml-[40%] p-3 rounded-3xl text-base fixed font-semibold flex gap-[1vw] mt-6 bg-[#fbfbf8c1]">
+    <div class=" childnav z-[99] ml-[38%] px-3 py-2 rounded-3xl text-base fixed font-semibold flex gap-[1vw] mt-5 bg-[#fbfbf8c1]">
         <a class=" no-underline	" href="">Home</a>
         <a class=" no-underline	" href="">About</a>
         <a  class=" no-underline "href="">Work</a>
@@ -25,8 +26,8 @@
         <a class=" no-underline	" href="">Contact</a>
     </div>
 
-    <div class="main bg-[#F3F3E9]">
-        <div class="page1 w-[100%] h-[75vh] p-10 pt-9 ">
+    <div class="main ">
+        <div class="page1  bg-[#F3F3E9]  w-[100%] h-[75vh] p-10 pt-9 ">
             <nav class="flex items-center justify-between">
                 <div>
 
@@ -35,25 +36,33 @@
 
 
                 <div>
-                    <h1>Harshwardhan Patil</h1>
+                    <h2>Harshwardhan Patil</h2>
                 </div>
             </nav>
 
-            <h1 class="text-[8vw] font-[500] leading-[9rem] text-[#0F1D07] mt-32">Extraordinary <br> Digital Experiences</h1>
+            <h1 class="text-[9vw] font-[500] leading-[9rem] text-[#0F1D07] mt-32">Extraordinary <br> Digital Experiences</h1>
 
         </div>
 
 
-        <div class="page2 w-[100%] h-[100vh] bg-[#F3F3E9] flex items-center justify-center ">
-            <video class=" w-[90%] rounded-3xl" autoplay loop muted src="./page2.mp4"></video>
-
+        <div class="page2 w-full h-screen bg-[#F3F3E9] flex items-center justify-center relative">
+            <video id="customVideo" class="w-[90%] overflow-hidden relative rounded-3xl"  autoplay  muted src="./page2.mp4"></video>
+            <div class="absolute bottom-10 right-20 flex space-x-4  p-2 rounded-full">
+                <button id="playPauseBtn" class="bg-[#00000064] hover:bg-[#000] text-white px-4 py-2 rounded-lg "><i class="ri-pause-circle-line"></i></button>
+                <button id="muteBtn" class="bg-[#00000064] hover:bg-[#000] text-white px-4 py-2 rounded-lg "><i class="ri-volume-mute-line"></i></button>
+            </div>
         </div>
         
+        
 
-        <div class="page3 w-[100%] h-[100vh] bg-[#B488F1] flex justify-center items-center flex-col ">
-            <h1 class=" w-[78vw] text-[6vw] font-[500] text-white leading-[6rem]">We design, build and ship world-class digital products for forward-thinking brands.</h1>
+        <div class="page3 w-[100%] h-[100vh] mt-[2vw] pt-[3vh] pb-[5vh] bg-[#B488F1] flex justify-center items-center flex-col ">
+           <div class=" w-full h-[40vh] overflow-hidden leading-none	">
+            <h1 class=" w-[95vw] text-[6vw] text-center font-[600] text-white ">We design, build and ship </h1>
+            <h1 class=" w-[95vw] text-[6vw] text-center font-[600] text-white ">world-class digital products</h1>
+            <h1 class=" w-[95vw] text-[6vw] text-center font-[600] text-white ">for forward-thinking brands.</h1>
+           </div>
        
-            <div class=" brandname w-[50vw]  h-[10vh] flex-wrap flex gap-20 items-center mt-16 relative overflow-hidden ">
+            <div class=" brandname w-[50vw]  h-[10vh] text-white flex-wrap flex gap-20 items-center mt-16 relative overflow-hidden ">
                 
                     <div><svg width="141" height="20" viewBox="0 0 141 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="SVG_svg-raw-wrap__ODfz9 HomepageLogos_homepage-logos__logo__j4N53" style="--width: 141; --height: 20   ;">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V6.66829H6.58979V20H13.1796V6.66829H19.7694V0H0ZM39.539 0H26.3594V6.66747H39.539V0ZM26.3593 20.0002H19.7695V6.66846H26.3593V13.3319H39.5438V20.0002H26.3593ZM56.3402 5.0415H46.6562V7.80984H49.8924V16.5131H53.0992V7.80984H56.3402V5.0415ZM56.0234 12.22C56.0234 9.2536 57.7064 7.72861 59.9867 7.72754C62.3646 7.72863 63.8519 9.28766 63.8519 12.4823C63.8519 12.7251 63.8519 12.9097 63.8372 13.0554H58.7504C58.8483 14.0024 59.4114 14.4298 60.2192 14.4298C60.978 14.4298 61.6047 14.2647 62.4664 13.8227L63.6071 15.7071C62.5349 16.3337 61.4284 16.6931 60.0723 16.6931C57.4628 16.6931 56.0234 14.8572 56.0234 12.22ZM59.9058 9.90821C59.2302 9.90821 58.8483 10.3696 58.7504 11.2195H61.2277C61.0808 10.3502 60.7822 9.90821 59.9058 9.90821ZM69.4868 14.3026C68.6821 14.2998 68.2676 13.5957 68.2676 12.2385C68.2676 10.8786 68.6495 10.1258 69.4083 10.1258C70.0546 10.1258 70.3336 10.4852 70.7449 11.238L72.7914 9.69842C72.0325 8.48424 71.0876 7.73145 69.4524 7.73145C66.6765 7.73145 65.3203 9.55272 65.3203 12.1899C65.3203 15.0894 66.838 16.697 69.3839 16.697C70.9212 16.697 71.8611 16.1239 72.8697 14.6474L70.9848 13.1904C70.443 13.9894 70.0471 14.3007 69.4868 14.3026ZM77.5499 8.47995C78.0982 8.07199 78.7102 7.72716 79.7334 7.72716V7.73202C81.633 7.73202 82.5436 8.99476 82.5436 11.258V16.5178H79.5523V11.632C79.5523 10.5198 79.1851 10.2235 78.5584 10.2235C77.9318 10.2235 77.5499 10.5149 77.5499 11.598V16.513H74.5781V5.74561L77.5499 4.56543V8.47995ZM89.7123 13.9245C88.3268 13.9245 87.7638 12.5306 87.7638 10.7773C87.7638 9.02403 88.3415 7.63015 89.683 7.63015C90.7405 7.63015 91.137 8.30038 91.5483 9.36886L94.4564 8.23724C93.6633 6.07114 92.5421 4.86182 89.6977 4.86182C86.5937 4.86182 84.4102 7.09105 84.4102 10.7773C84.4102 14.1722 86.2461 16.6928 89.683 16.6928C92.4246 16.6928 93.7122 15.2358 94.4907 13.7253L91.7784 12.2975C91.1517 13.3805 90.7209 13.9196 89.7123 13.9196V13.9245ZM99.2657 7.91166V8.53332L99.2706 8.53818C99.7847 8.04765 100.362 7.73682 101.121 7.73682C101.748 7.73682 102.179 7.88252 102.526 8.09621L101.831 11.1608C101.449 10.748 101.018 10.4372 100.441 10.4372C99.7113 10.4372 99.2657 10.782 99.2657 11.831V16.5178H96.2891V7.91166H99.2657ZM108.915 12.8266C108.915 13.9097 108.533 14.2011 107.926 14.2011C107.319 14.2011 106.937 13.9048 106.937 12.7926V7.90674H103.945V13.1666C103.945 15.4298 104.856 16.6926 106.756 16.6926C107.764 16.6926 108.391 16.3477 108.919 15.9398V16.5129H111.911V7.9116H108.919V12.8266H108.915ZM117.047 8.48033C117.59 8.07237 118.202 7.72754 119.226 7.72754V7.7324C121.125 7.7324 122.036 8.99514 122.036 11.2584V16.5182H119.044V11.6323C119.044 10.5202 118.682 10.2239 118.056 10.2239C117.429 10.2239 117.047 10.5153 117.047 11.5984V16.5134H114.07V7.90724H117.047V8.48033ZM127.944 14.3026C127.139 14.2999 126.725 13.5957 126.725 12.2385C126.725 10.8786 127.107 10.1258 127.865 10.1258C128.512 10.1258 128.791 10.4852 129.202 11.238L131.248 9.69842C130.49 8.48424 129.545 7.73145 127.909 7.73145C125.133 7.73145 123.777 9.55272 123.777 12.1899C123.777 15.0894 125.3 16.697 127.841 16.697C129.378 16.697 130.318 16.1239 131.327 14.6474L129.442 13.1904C128.9 13.9894 128.504 14.3007 127.944 14.3026ZM136.008 8.47995C136.551 8.07199 137.163 7.72716 138.187 7.72716V7.73202C140.086 7.73202 140.997 8.99476 140.997 11.258V16.5178H138.005V11.632C138.005 10.5198 137.643 10.2235 137.016 10.2235C136.39 10.2235 136.008 10.5149 136.008 11.598V16.513H133.031V5.74561L136.008 4.56543V8.47995Z" fill="currentColor"></path>
@@ -103,130 +112,190 @@
         </div>
 
 
-        <div class="page4 w-[100%] h-[100vh] flex justify-center items-center mt-[3%] relative ">
-            <h2 class="absolute text-white text-[1.5vw] top-[1%] left-[3%]">Curtin Open Day</h2>
-            <img class="w-[95%] h-[100vh] rounded-3xl" src="https://a-us.storyblok.com/f/1017006/2520x1554/172c43506d/curtinopenday-landscape-1.jpg" alt="">
-            <video class=" w-[70%] rounded-3xl absolute" autoplay loop muted src="./page4.mp4"></video>
+        <div class="page4 w-[100vw] h-[100vh] bg-[#B488F1]  flex justify-center items-center relative ">
+            <img class="w-[95%] h-[90%] rounded-3xl" src="https://a-us.storyblok.com/f/1017006/2520x1554/172c43506d/curtinopenday-landscape-1.jpg" alt="">
+            <h2 class="absolute text-white text-[1.5vw] top-[5%] left-[3%]">Curtin Open Day</h2>
+            <video class=" w-[70%] rounded-3xl absolute"  autoplay  muted src="./page4.mp4"></video>
+          
         </div>
         
 
-        <div class="page5 w-[100%] h-[100vh] flex  justify-center items-center  relative mt-[3%] ">
+        <div class="page5 w-[100vw] bg-[#F3F3E9] relative ">
+           <div class=" h-[90vh] flex  justify-center items-center ">
             <div class="left w-[50%] h-[100%] pl-11 pr-6 relative">
                 <h2 class="absolute text-white text-[1.5vw] left-[8%]">Sussex Taps</h2>
-                <video class=" w-[100%] h-[100%] rounded-3xl object-cover  "   autoplay loop muted src="./page5.mp4"></video>
+                <video class=" w-[100%] h-[100%] rounded-3xl object-cover  "  autoplay  muted src="./page5.2.mp4"></video>
             </div>
             <div class="right w-[50%] h-[100%] pl-6 pr-11 relative" >
                 <h2 class="absolute text-white text-[1.5vw] left-[8%]">Ferox</h2>
-                <video class=" w-[100%] h-[100%] rounded-3xl object-cover "  autoplay loop muted src="./page4.mp4"></video>
+                <video class=" w-[100%] h-[100%] rounded-3xl object-cover " autoplay  muted src="./page5.1.mp4"></video>
+            </div>
+           </div>
+        </div>
+
+        <div class= "page6 bg-[#F3F3E9] w-[100vw] h-[100vh]  flex justify-center items-center relative ">
+            <h2 class="absolute text-white text-[1.5vw] top-[5%] left-[6%]">TrailsWA</h2>
+           <img class=" w-[90%] h-[90%]  object-cover rounded-3xl" src="./page6img.webp " alt="">
+        </div>
+
+        <div class="page7 bg-[#F3F3E9] w-[100%] h-[60vh] ">
+            <div class="pt-[10%]">
+                <h1 class=" w-[100%] text-[8vw] font-[500] leading-[7rem] tracking-tight text-[#0F1D07]  ml-16">Great work for </h1>
+            <h1 class=" w-[100%] text-[8vw] font-[500] leading-[7rem] tracking-tight text-[#0F1D07]  ml-16">great☺people.</h1>
             </div>
         </div>
 
-        <div class= "page6 w-[100%] h-[100vh] flex justify-center items-center  ">
-           <img class=" rounded-3xl" src="./page6img.webp " alt="">
-        </div>
-
-        <div class="page7 w-[100%] h-[50vh]">
-            <h1 class=" w-[60%] text-[9vw] font-[500] leading-[7rem] tracking-tight text-[#0F1D07] mt-32 ml-16">Great work for great☺people.</h1>
-        </div>
-
-        <div class="page8 w-[100%] h-[120vh] flex items-center justify-center p-12">
-            <div class="left w-[50%] h-[100%] flex justify-between  flex-col">
+        <div class="page8 bg-[#F3F3E9] w-[100%] h-[120vh] flex items-center justify-center p-12">
+            <div class="left w-[40%] h-[100%] flex justify-between  flex-col">
                 <div>
-                <p class="mb-4 w-[90%] text-2xl font-semibold ">We put people first, understanding that a well-crafted product significantly impacts the lives of those who use it. By empowering users, we’re able to solve unique problems, accelerate progress and unlock potential for our clients.</p>
-                <p class="mb-4 w-[90%] text-2xl font-semibold ">Our independent spirit drives our creative energy and approach to technology, allowing us to ensure quality and consistently deliver outstanding outcomes.</p>
+                <p class="mb-4 w-[90%] text-lg font-medium ">We put people first, understanding that a well-crafted product significantly impacts the lives of those who use it. By empowering users, we’re able to solve unique problems, accelerate progress and unlock potential for our clients.</p>
+                <p class="mb-4 w-[90%] text-lg font-medium ">Our independent spirit drives our creative energy and approach to technology, allowing us to ensure quality and consistently deliver outstanding outcomes.</p>
                 <button class="bg-black text-white px-4 py-2  font-semibold rounded-full">About Us →</button>
             </div>
 
             <div>
                 <div class="flex justify-between  items-center p-5">
-                    <h1 class="text-7xl font-semibold">100%</h1>
-                    <h4 class="text-xl" >In-house & independent</h4>
+                    <h1 class="text-7xl font-semibold ">100%</h1>
+                    <h4 class=" w-[30%] font-semibold text-xl mr-[10%]" >In-house & independent</h4>
                 </div>
                 <hr>
                 <div class="flex justify-between items-center p-5">
                     <h1 class="text-7xl font-semibold">13</h1>
-                    <h4 class="text-xl" >Years crafting digital experiences</h4>
+                    <h4 class="w-[40%] font-semibold text-xl" >Years crafting digital experiences</h4>
                 </div>
                 <hr>
                 <div class="flex justify-between items-center p-5">
                     <h1 class="text-7xl font-semibold" >80+</h1>
-                    <h4 class="text-xl">Awards from AWA, FWA, and Awwwards</h4>
+                    <h4 class=" w-[40%]  font-semibold text-xl">Awards from AWA, FWA, and Awwwards</h4>
                 </div>
                 <hr>
             </div>
             </div>
-            <div class="right w-[50%] h-[100%] bg-[url('https://a-us.storyblok.com/f/1017006/1200x1400/dc71890964/humaanpeople.jpg/m/838x1021/filters:quality(80)')] rounded-2xl "></div>
+
+            <div class="right w-[60%] h-[100%] bg-[url('https://a-us.storyblok.com/f/1017006/1200x1400/dc71890964/humaanpeople.jpg/m/838x1021/filters:quality(80)')] rounded-2xl "></div>
         </div>
 
 
-        <div class="page9 w-[100%] h-[100vh] rounded-e-sm">
-            <h2 class="text-6xl font-semibold pl-12">What's New</h2>
-
-
-            <swiper-container class="mySwiper w-[100vw] p-[3vw] h-[80%] mt-[50px] relative bg-[#F3F3E9] " space-between="40"  
-    slides-per-view="4.5" >
-
-
-    <swiper-slide  class="kuch flex h-[100%] items-start justify-center relative flex-col transition-all  bg-[#F3F3E9] text-xl text-center cursor-grab active:cursor-grabbing  active:scale-90" >
-      <img class="block rounded-2xl   w-[100%] h-[70%] object-cover " src="https://a-us.storyblok.com/f/1017006/600x790/f48bc1ea20/humaan.jpg" alt="">
-      <span class=" p-[1vw] text-sm text-[#80807A] font-[700]">22.12.23</span>
-      <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Headless Humaan<!-- -->: <p class=" text-[#80807A] w-[110%]  font-[400]">A fresh new look for humaan.com – our sixth iteration. Please, take a look around.</p> </h3> </div>
-    </swiper-slide>
-
-
-    <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
-      <img  class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover"src="https://a-us.storyblok.com/f/1017006/600x790/4c3962aae5/xmas.jpg" alt="">
-    <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
-      <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Season's Greenthings<!-- -->: <p class=" text-[#80807A]  font-[400]">2023, the year we embraced the morph suit... We hope you have a safe festive season!</p> </h3> </div>
-    </swiper-slide>
-    <swiper-slide  class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center">
-      <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/600x790/167932ea15/cocos.jpg" alt="">
-    <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
-      <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Cocos Keeling Islands<!-- -->: <p class=" text-[#80807A]  font-[400]">A beautiful new website for Australia's last unspoilt paradise</p> </h3> </div>
-    </swiper-slide>
-    
-      <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
-        <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/601x780/7ecf7ab961/alder-feed.jpg" alt="">
-    <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
-      <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Alder Tapware<!-- -->: <p class=" text-[#80807A]  font-[400]">Inspiration, innovation, design. An all new website for Alder tapware.</p> </h3> </div>
-    </swiper-slide>
-
-
-
-        <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
-            <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/1200x1580/23137800a3/humaan-annotations.png" alt="">
-        <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
-      <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Humaan Annotations<!-- -->: <p class=" text-[#80807A]  font-[400]">A handy little tool from the labs that extends Figma's built in commenting functionality</p> </h3> </div>
-    </swiper-slide>
-
-    <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
-        <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/600x790/d28f4d34ae/loam2.jpg" alt="">
-    <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
-  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Loam Bio<!-- -->: <p class=" text-[#80807A]  font-[400]">Putting agriculture at the forefront of addressing climate change</p> </h3> </div>
-</swiper-slide>
-
-
-    <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
-        <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/600x790/6a408c2c00/loudshirtday.jpg" alt="">
-    <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
-  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Loud Shirt Day<!-- -->: <p class=" text-[#80807A]  font-[400]">Proudly ‘wearing it loud’ today for Loud Shirt Day - supporting children with hearing loss.</p> </h3> </div>
-</swiper-slide>
-
-
-
-</swiper-container>
-    </div>
-
-    <div class="page10 w-[100%] h-[100vh] bg-[#FFFFFF] px-[5vw] py-[4vw]">
-        <h1 class="text-[5vw] font-[500] leading-[4rem] text-[#0F1D07] mt-32">Let's make<i class="ri-arrow-right-line text-[#90F188]"></i></h1>
-        <h1 class="text-[5vw] font-[500] leading-[4rem] text-[#0F1D07] ">Something <span>epic</span></h1>
-
-        <div>
-         <div>
+        <div class="page9 bg-[#F3F3E9] w-[100%]  h-[100vh]  overflow-hidden rounded-e-sm">
+            <h2 class="text-6xl font-semibold pl-12 mt-[10%]">What's New</h2>
+       
+            <div>
+                <swiper-container class="mySwiper w-[100vw] p-[3vw] h-[80%] mt-[50px] relative bg-[#F3F3E9] " space-between="40"  
+                slides-per-view="4.5" >
             
-         </div>
-        </div>
+            
+                <swiper-slide  class="kuch flex h-[100%] object-cover items-start justify-center relative flex-col transition-all  bg-[#F3F3E9] text-xl text-center cursor-grab active:cursor-grabbing  active:scale-90" >
+                  <img class="block rounded-2xl   w-[100%] h-[100%]  " src="https://a-us.storyblok.com/f/1017006/600x790/f48bc1ea20/humaan.jpg" alt="">
+                  <span class=" p-[1vw] text-sm text-[#80807A] font-[700]">22.12.23</span>
+                  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Headless Humaan<!-- -->: <p class=" text-[#80807A] w-[110%]  font-[400]">A fresh new look for humaan.com – our sixth iteration. Please, take a look around.</p> </h3> </div>
+                </swiper-slide>
+            
+            
+                <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
+                  <img  class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover"src="https://a-us.storyblok.com/f/1017006/600x790/4c3962aae5/xmas.jpg" alt="">
+                <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
+                  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Season's Greenthings<!-- -->: <p class=" text-[#80807A]  font-[400]">2023, the year we embraced the morph suit... We hope you have a safe festive season!</p> </h3> </div>
+                </swiper-slide>
+                <swiper-slide  class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center">
+                  <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/600x790/167932ea15/cocos.jpg" alt="">
+                <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
+                  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Cocos Keeling Islands<!-- -->: <p class=" text-[#80807A]  font-[400]">A beautiful new website for Australia's last unspoilt paradise</p> </h3> </div>
+                </swiper-slide>
+                
+                  <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
+                    <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/601x780/7ecf7ab961/alder-feed.jpg" alt="">
+                <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
+                  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Alder Tapware<!-- -->: <p class=" text-[#80807A]  font-[400]">Inspiration, innovation, design. An all new website for Alder tapware.</p> </h3> </div>
+                </swiper-slide>
+            
+            
+            
+                    <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
+                        <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/1200x1580/23137800a3/humaan-annotations.png" alt="">
+                    <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
+                  <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Humaan Annotations<!-- -->: <p class=" text-[#80807A]  font-[400]">A handy little tool from the labs that extends Figma's built in commenting functionality</p> </h3> </div>
+                </swiper-slide>
+            
+                <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
+                    <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/600x790/d28f4d34ae/loam2.jpg" alt="">
+                <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
+              <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Loam Bio<!-- -->: <p class=" text-[#80807A]  font-[400]">Putting agriculture at the forefront of addressing climate change</p> </h3> </div>
+            </swiper-slide>
+            
+            
+                <swiper-slide class="kuch flex items-start justify-center flex-col transition-all relative bg-[#F3F3E9] text-xl text-center" >
+                    <img class="block rounded-2xl cursor-grab active:cursor-grabbing active:scale-90 w-[100%] h-[70%] object-cover" src="https://a-us.storyblok.com/f/1017006/600x790/6a408c2c00/loudshirtday.jpg" alt="">
+                <span class=" p-[1vw] text-sm text-[#80807A] font-[700] ">22.12.23</span>
+              <div class="FeedSlider_feed__content__spbob"><h3 class="FeedSlider_feed__title__sGhl7">Loud Shirt Day<!-- -->: <p class=" text-[#80807A]  font-[400]">Proudly ‘wearing it loud’ today for Loud Shirt Day - supporting children with hearing loss.</p> </h3> </div>
+            </swiper-slide>
+            
+            
+            
+            </swiper-container>
+            </div>
+
+           
     </div>
+
+    <div class="page10 w-[100%] h-[100vh] flex justify-between flex-col bg-[#FFFFFF] px-[5vw] py-[4vw]">
+       <div>
+        <h1 class="text-[5vw] font-[500] leading-[4rem] text-[#0F1D07]  ">Let's make<i class="ri-arrow-right-line text-[#90F188]"></i></h1>
+        <h1 class="text-[5vw] font-[500] leading-[4rem] text-[#0F1D07] ">Something <span>epic</span></h1>
+       </div>
+
+     <div>
+        <div>
+            <div class="speak w-[70%] font-semibold flex items-center justify-between   ">
+                <div >
+                     <h4>Speak to us</h4>
+                     <a href="">1800 486 226</a>
+                     <br>
+                     <a href="">contact@humaan.com</a>
+                </div>
+                <div class="w-[17%]">
+                    <h4>Perth</h4>
+                    <h4 class="text-[#878E83]">470 William St,Perth, WA 6000</h4>
+                </div>
+                <div class="w-[20%]" >
+                    <h4>Melbourne</h4>
+                    <h4 class="text-[#878E83]">23/10-20 Gwynne St,Cremorne, VIC 3121</h4>
+                </div>
+                <div class="w-[20%]">
+                    <h4>Sydney</h4>
+                    <h4 class="text-[#878E83]">35/285A Crown St,Surry Hills, NSW 2010</h4>
+                </div>
+            </div>
+    
+            
+            <div>
+                <hr class=" bg-[#90F188]">
+            </div>
+    
+            <div class="w-[100%] h-[10vh] flex items-center justify-between">
+    
+                <div class="flex items-center  justify-between gap-1">
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="16" fill="none" viewBox="0 0 125 16" class="" style="--width:125;--height:20"><path fill="currentColor" fill-rule="evenodd" d="M65.515 6.047v9.202c0 .196-.16.354-.358.354H62.5a.357.357 0 0 1-.36-.354V7.143c0-2.556-1.332-3.985-3.58-3.985-2.168 0-3.983 1.413-3.983 4.016v8.075c0 .196-.16.354-.358.354h-2.656a.356.356 0 0 1-.358-.354V7.143c0-2.556-1.333-3.985-3.582-3.985-2.167 0-3.983 1.413-3.983 4.016v8.075c0 .196-.16.354-.358.354h-2.656a.356.356 0 0 1-.358-.354V.75c0-.196.16-.354.358-.354h2.624c.198 0 .359.158.359.354v1.502C44.846.46 46.757 0 48.332 0c2.148 0 3.934.866 5.033 2.307.145.19.434.163.578-.029C55.312.466 57.49 0 59.267 0c3.662 0 6.248 2.492 6.248 6.047ZM28.036 16c3.597 0 7.13-2 7.13-6.842V.75a.356.356 0 0 0-.358-.354h-2.656a.356.356 0 0 0-.358.354v8.107c0 2.937-1.654 4.015-3.758 4.015s-3.758-1.078-3.758-4.015V.751a.356.356 0 0 0-.359-.354h-2.655a.356.356 0 0 0-.358.354v8.407C20.906 14 24.422 16 28.036 16ZM11.4 6.681h-7.41a.356.356 0 0 1-.359-.355V.876a.356.356 0 0 0-.358-.354H.359A.356.356 0 0 0 0 .876v14.373a.357.357 0 0 0 .359.355h2.913a.356.356 0 0 0 .358-.354v-4.816a.356.356 0 0 1 .358-.355h7.41a.357.357 0 0 1 .359.355v4.816a.356.356 0 0 0 .358.354h2.913a.356.356 0 0 0 .358-.354V.876a.356.356 0 0 0-.358-.354h-2.913a.356.356 0 0 0-.358.355v5.45a.355.355 0 0 1-.358.354ZM83.709.39H82.3c-.08 0-.14.03-.19.08-.05.05-.08.12-.08.19v1.57a5.68 5.68 0 0 0-2-1.62C79.23.22 78.29 0 77.19 0c-2.15 0-4.07.83-5.46 2.25-1.38 1.42-2.23 3.42-2.23 5.74 0 4.66 3.39 8 7.69 8 1.1 0 2.04-.21 2.84-.6.81-.39 1.47-.94 2-1.62v1.56c0 .15.12.27.27.27H85.11c.08 0 .15-.03.2-.08.04-.05.07-.11.07-.19V.66c0-.15-.12-.27-.27-.27h-1.4Zm-1.6 8.83c-.47 2.15-2.16 3.65-4.51 3.65-2.9 0-4.65-2.21-4.65-4.88 0-2.66 1.75-4.87 4.65-4.87 2.25 0 3.9 1.38 4.44 3.38.13.47.2.97.2 1.49 0 .43-.05.84-.13 1.23ZM92.998 8c0 2.666 1.751 4.873 4.642 4.873 2.778 0 4.64-2.095 4.64-4.873s-1.862-4.873-4.64-4.873c-2.89 0-4.642 2.206-4.642 4.873Zm12.072 7.603h-2.64a.352.352 0 0 1-.252-.103.354.354 0 0 1-.106-.251v-1.471c-1.06 1.349-2.65 2.222-4.834 2.222-4.304 0-7.692-3.35-7.692-8 0-4.651 3.388-8 7.692-8 2.184 0 3.775.889 4.834 2.238V.751c0-.196.16-.354.359-.354h2.639c.198 0 .359.158.359.354V15.25c0 .195-.16.354-.36.354l.001-.001ZM125 15.249V6.047C125 2.492 122.414 0 118.753 0c-1.573 0-3.485.46-4.722 2.252V.75a.356.356 0 0 0-.358-.354h-2.624a.356.356 0 0 0-.358.354v14.499a.357.357 0 0 0 .358.354h2.655c.199 0 .36-.158.36-.354V7.174c0-2.603 1.814-4.016 3.983-4.016 2.247 0 3.58 1.429 3.58 3.985v8.106c.001.047.01.093.028.136a.36.36 0 0 0 .331.218h2.655a.356.356 0 0 0 .359-.354Z" clip-rule="evenodd"></path></svg>
+                        <h6  class="text-[#878E83]" >© 2024 <a href="">Privacy</a></h6>
+                         <button class=" text-black hover:bg-black hover:text-white hover:px-4 hover:py-2  hover:font-semibold hover:rounded-full">Acknowledgement of Country</button>
+                    
+                </div>
+    
+           <div class="flex items-center justify-between">
+            <button class=" text-black hover:bg-black hover:text-white hover:px-4 hover:py-2  hover:font-semibold hover:rounded-full"><span>Twitter</span>X</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="none" viewBox="0 0 13 14" class="FooterSimpleContents_footer-socials__separator__8jE_R" style="--width:13;--height:14"><path fill="#90F188" fill-rule="evenodd" d="M7.121.87H5.874v4.123L2.96 2.078l-.882.882 2.92 2.919H.864v1.247h4.133l-2.919 2.919.882.882 2.913-2.913v4.122h1.247V8.004l2.923 2.923.882-.882-2.919-2.919h4.125V5.88H8.009l2.919-2.919-.882-.882-2.925 2.925V.869Z" clip-rule="evenodd"></path></svg>
+            <button class=" text-black hover:bg-black hover:text-white hover:px-4 hover:py-2  hover:font-semibold hover:rounded-full">Instagram</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="none" viewBox="0 0 13 14" class="FooterSimpleContents_footer-socials__separator__8jE_R" style="--width:13;--height:14"><path fill="#90F188" fill-rule="evenodd" d="M7.121.87H5.874v4.123L2.96 2.078l-.882.882 2.92 2.919H.864v1.247h4.133l-2.919 2.919.882.882 2.913-2.913v4.122h1.247V8.004l2.923 2.923.882-.882-2.919-2.919h4.125V5.88H8.009l2.919-2.919-.882-.882-2.925 2.925V.869Z" clip-rule="evenodd"></path></svg>
+            <button class=" text-black hover:bg-black hover:text-white hover:px-4 hover:py-2  hover:font-semibold hover:rounded-full">LinkedIn</button>
+           
+    
+           </div>
+          
+        </div>
+    
+     </div>
+
+    
 
 </div>
         
