@@ -58,6 +58,19 @@ muteBtn.addEventListener('click', () => {
 }
 videoController()
 
+
+
+
+
+Shery.mouseFollower({
+  //Parameters are optional.
+  skew: true,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});
+
+
+
 gsap.from(".page1 h1",{
  y:'300',
 })
@@ -96,9 +109,9 @@ gsap.to(".page2 ",{
 })
 
 gsap.to(".brandname svg",{
-  y:-100,
+  y:-250,
   stagger:0.5,
-  delay:1,
+  delay:2,
   repeat:-1,
 })
 
