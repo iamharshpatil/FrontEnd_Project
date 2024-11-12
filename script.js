@@ -58,7 +58,7 @@ muteBtn.addEventListener('click', () => {
 }
 videoController()
 
-alert("yet this is not responsive..")
+// alert("yet this is not responsive..")
 
 
 
